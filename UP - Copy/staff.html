@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Staff - Up Skill Academy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9d6c9a6.js" crossorigin="anonymous"></script>
+  <style>
+    /* Navbar branding already set globally; local tweaks below */
+    .staff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+    .staff-card { border: none; padding: 1.25rem; text-align: center; transition: transform .18s ease, box-shadow .18s ease; }
+    .staff-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+    .staff-photo { width:120px; height:120px; object-fit:cover; border-radius:50%; border:6px solid #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.12); margin: -60px auto 10px; background:#fff; }
+    .staff-card .card-body { padding-top: 0.5rem; }
+    .staff-name { font-weight:700; letter-spacing:0.2px; }
+    .staff-role { color: #6c757d; font-size:0.95rem; }
+    .staff-bio { font-size:0.95rem; color:#495057; }
+    .staff-meta { margin-top:8px; }
+    .social-icon { width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:#1a237e; color:#fff; margin:0 6px; }
+    /* Banner spacing so circular photos overlap nicely */
+    .staff-header { padding-top: 3.5rem; padding-bottom: 1.25rem; position: relative; }
+    @media (max-width:576px){ .staff-photo { width:100px; height:100px; margin-top: -50px; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg" style="background-color:#1a237e;">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center text-white" href="index.html">
+        <img src="image/UP SKILL ACADEMY_page-0001.jpg" alt="Logo" width="60" height="60" class="me-2 rounded-circle" style="object-fit:cover;">
+        <span>UP SKILL ACADEMY</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon bg-light"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="event.html">Event</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="staff.html">Staff</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="facility.html">Facility</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="admission.html">Admission</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="ourschool.html">Our School</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="staff-header text-center text-white" style="background:linear-gradient(90deg,#1a237e,#283593);">
+    <div class="container py-5">
+      <h1 class="display-6 fw-bold mb-2">Our Staff</h1>
+      <p class="mb-0">A team of dedicated professionals committed to student success.</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row">
+      <div class="col-12">
+        <div class="staff-grid">
+          <!-- Staff card 1 -->
+          <div class="card staff-card shadow-sm position-relative">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe" class="staff-photo">
+            <div class="card-body">
+              <h5 class="staff-name">John Doe</h5>
+              <div class="staff-role">Head of Mathematics</div>
+              <p class="staff-bio mt-2">John has 12 years of teaching experience and leads our math curriculum and mentoring program.</p>
+            </div>
+          </div>
+
+          <!-- Staff card 2 -->
+          <div class="card staff-card shadow-sm position-relative">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith" class="staff-photo">
+            <div class="card-body">
+              <h5 class="staff-name">Jane Smith</h5>
+              <div class="staff-role">Science Teacher</div>
+              <p class="staff-bio mt-2">Jane runs our science labs and encourages hands-on inquiry for all learners.</p>
+            </div>
+          </div>
+
+          <!-- Staff card 3 -->
+          <div class="card staff-card shadow-sm position-relative">
+            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Michael Lee" class="staff-photo">
+            <div class="card-body">
+              <h5 class="staff-name">Michael Lee</h5>
+              <div class="staff-role">English Teacher</div>
+              <p class="staff-bio mt-2">Michael focuses on literacy and spoken English across the primary levels.</p>
+            </div>
+          </div>
+
+          <!-- Staff card 4 -->
+          <div class="card staff-card shadow-sm position-relative">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Brown" class="staff-photo">
+            <div class="card-body">
+              <h5 class="staff-name">Sarah Brown</h5>
+              <div class="staff-role">ICT Coordinator</div>
+              <p class="staff-bio mt-2">Sarah manages our computer lab and integrates technology into classroom learning.</p>
+            </div>
+          </div>
+
+          <!-- Staff card 5 (example) -->
+          <div class="card staff-card shadow-sm position-relative">
+            <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Aisha Omar" class="staff-photo">
+            <div class="card-body">
+              <h5 class="staff-name">Aisha Omar</h5>
+              <div class="staff-role">Nursery Lead</div>
+              <p class="staff-bio mt-2">Aisha leads early years learning with a focus on play-based development.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center py-4" style="background:#1a237e;color:#fff;">
+    &copy; <span id="year"></span> Up Skill Academy. All Rights Reserved.
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
