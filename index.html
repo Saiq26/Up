@@ -5,47 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Up Skill Academy</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    :root {
-      --primary-color: #1a237e; /* deep blue */
-      --secondary-color: #ffd600; /* gold/yellow */
-      --accent-color: #fff; /* white */
-      --dark-blue: #0d1b3d;
-      --logo-text-color: orange; /* orange for logo text */
-    }
-    .navbar {
-      background-color: var(--primary-color);
-    }
-    .navbar .nav-link, .navbar-brand {
-      color: var(--accent-color) !important;
-    }
-    .navbar .nav-link {
-      color: orange !important;
-      font-weight: 600;
-    }
-    .navbar-brand span {
-      color: orange;
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-    .navbar .btn-warning {
-      background-color: var(--secondary-color);
-      color: var(--primary-color);
-      border: none;
-    }
-    .navbar .btn-warning:hover {
-      background-color: #ffc400;
-      color: var(--primary-color);
-    }
-    .dropdown-menu {
-      background-color: var(--primary-color);
-    }
-    .dropdown-menu .dropdown-item {
-      color: var(--accent-color);
-    }
-    .dropdown-menu .dropdown-item:hover {
-      background-color: #283593;
-    }
+
+    
     .features .card i {
       color: var(--secondary-color);
     }
@@ -144,60 +107,8 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-        <img src="image/UP SKILL ACADEMY_page-0001.jpg" alt="Up Skill Academy Logo" width="80" height="80" class="me-2 rounded-circle" style="object-fit:cover;">
-        <span>UP SKILL ACADEMY</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <!-- About Us Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-bs-toggle="dropdown">About Us</a>
-            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-              <li><a class="dropdown-item" href="#aboutCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="aboutCollapse">Historical Background</a></li>
-              <li><a class="dropdown-item" href="#">Administration</a>
-              <li><a class="dropdown-item" href="#">Welcome Note</a></li>
-            </ul>
-          </li>
-          <!-- Our School Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="schoolDropdown" data-bs-toggle="dropdown">Our school</a>
-            <ul class="dropdown-menu" aria-labelledby="schoolDropdown">
-              <li><a class="dropdown-item" href="ourschool.html#daycare">Daycare school</a></li>
-              <li><a class="dropdown-item" href="ourschool.html#nursery">Nursery school</a></li>
-              <li><a class="dropdown-item" href="ourschool.html#primary">Primary school</a></li>
-            </ul>
-          </li>
-          <!-- Facility -->
-          <li class="nav-item"><a class="nav-link" href="facility.html">Facility</a></li>
-          <!-- Event -->
-          <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
-          <!-- Staff -->
-          <li class="nav-item"><a class="nav-link" href="staff.html">Staff</a></li>
-          <!-- Admission Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="admissionDropdown" data-bs-toggle="dropdown">Admission</a>
-            <ul class="dropdown-menu" aria-labelledby="admissionDropdown">
-              <li><a class="dropdown-item" href="admission.html#entry-requirements">Entry Requirements</a></li>
-              <li><a class="dropdown-item" href="admission.html#fee-structure">Fee structure</a></li>
-              <li><a class="dropdown-item" href="admission.html#download-form">Download Application Form</a></li>
-              <li><a class="dropdown-item" href="admission.html#help-desk">Help Desk</a></li>
-            </ul>
-          </li>
-          <!-- Contact Us -->
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-        </ul>
-        <a href="#" class="btn btn-warning ms-3">Get application form</a>
-      </div>
-    </div>
-  </nav>
+  <div id="header"></div>
+  
 
   <!-- Hero Section with Carousel -->
   <section class="hero p-0">
@@ -207,13 +118,16 @@
         <div class="hero-content d-flex align-items-center justify-content-start h-100" style="position:relative; z-index:2;">
           <div class="rounded-4 shadow-lg p-4 ms-4"
             style="max-width: 800px; text-align:left; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); border: 1.5px solid rgba(255,255,255,0.18); box-shadow: 0 8px 32px 0 rgba(31,38,135,0.10);">
-            <h1 class="display-5 fw-bold text-primary mb-3" style="letter-spacing:1px;">Welcome   to Our School</h1>
+            <h1 class="display-5 fw-bold text-primary mb-3" style="letter-spacing:1px;">Welcome to Our School</h1>
             <p class="mb-0 text-dark" style="font-size:1.1rem;">
               Schools are the window of creativity, vision, and adventure while gaining elementary knowledge of how the world works.
             </p>
+            
           </div>
         </div>
       </div>
+      
+    <marquee>hi</marquee>
     </div>
   </section>
 
@@ -297,41 +211,21 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row text-center text-md-start">
-        <div class="col-md-4 mb-3 mb-md-0">
-          <h6 class="fw-bold">Address</h6>
-          <p class="mb-1">Up Skill Academy </p>
-          <p class="mb-1">Vijijini Street</p>
-          <p>Maungani, Zanzibar</p>
-        </div>
-        <div class="col-md-4 mb-3 mb-md-0">
-          <h6 class="fw-bold">Contact Us</h6>
-          <p class="mb-1"><i class="fas fa-phone-alt me-2"></i>+255 777 903 231</p>
-          <p class="mb-1"><i class="fas fa-phone-alt me-2"></i>+255 772 217 921</p>
-          <p class="mb-1"><i class="fas fa-envelope me-2"></i>upskillacademy81@gmail.com</p>
-        </div>
-        <div class="col-md-4">
-          <h6 class="fw-bold">Follow Us</h6>
-          <a href="#" class="social-icon" aria-label="Facebook" style="background:#1877f3;">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="social-icon" aria-label="Instagram" style="background:#e4405f;">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://wa.me/2348001234567" target="_blank" class="social-icon" aria-label="WhatsApp" style="background:#25d366;">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
-      </div>
-      <hr class="bg-light my-4">
-      <p class="mb-0">&copy; <span id="year"></span> Up Skill Academy. All Rights Reserved.</p>
-    </div>
-  </footer>
-
+  <div id="footer"></div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // Load header.html into #header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+    // Load footer.html into #footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
     document.getElementById("year").textContent = new Date().getFullYear();
     // Smooth-open behavior for About -> Historical Background links
     (function() {
@@ -352,12 +246,9 @@
         }
       }
 
-      // Attach to any current or future links that target the collapse
       document.querySelectorAll('a[href="#aboutCollapse"]').forEach(function(a) {
         a.addEventListener('click', openAndScrollAbout);
       });
-
-  // Events were moved to a dedicated page: event.html
     })();
   </script>
 </body>
