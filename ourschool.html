@@ -15,6 +15,14 @@
     
     .navbar .nav-link { color: orange !important; font-weight:600; }
     .navbar-brand span { color: orange; font-weight:700; }
+    /* Program carousel image styling */
+    .program-img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 0.25rem;
+    }
+    .carousel-inner .program-img { height: 260px; }
   </style>
 <body>
   <!-- Navbar -->
@@ -33,15 +41,36 @@
   <div id="daycare" class="col-md-12">
         <div class="card program-card shadow-sm">
           <div class="row g-0 align-items-center">
-            <div class="col-md-5">
-              <img src="image/IMG_3873.JPG" class="img-fluid rounded-start" alt="Daycare">
+            <div class="col-md-5 order-md-2">
+              <div id="daycareCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2200">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="image/IMG_3873.JPG" class="program-img d-block w-100" alt="Daycare 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/IMG_3855.JPG" class="program-img d-block w-100" alt="Daycare 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/IMG_3856.JPG" class="program-img d-block w-100" alt="Daycare 3">
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-7 order-md-1">
               <div class="card-body">
                 <h3 class="card-title">Daycare</h3>
-                <p class="mb-1"><strong>Age:</strong> 6 months - 2 years</p>
-                <p class="mb-1"><strong>Hours:</strong> 7:30 - 16:00</p>
-                <p>Our daycare program focuses on nurturing routines, safe play, supervised naps and nutritious meals. Caregivers use play-based learning and gentle routines to support early development.</p>
+                <p class="mb-1"><strong>Age:</strong> 1 - 2 years</p>
+                <p class="mb-1"><strong>Hours:</strong> 8:00 - 15:30</p>
+                <p>At our daycare, we believe every child deserves a safe, loving, and inspiring place to grow. That’s why we provide:
+  
+                Caring hands & loving hearts – experienced teachers who treat every child like family.
+
+                Nutritious & delicious meals – keeping little tummies happy and healthy.
+
+                Creative learning & play – building curiosity, confidence, and friendships.
+
+                Safe & fun environment – so parents can have peace of mind all day.
+                Here, children laugh, learn, and create memories that last a lifetime. Parents trust us because we care, and kids love us because we make learning fun</p>
                 <p><strong>Enrollment:</strong> Contact admissions or visit the school to register.</p>
               </div>
             </div>
@@ -54,13 +83,25 @@
         <div class="card program-card shadow-sm">
           <div class="row g-0 align-items-center">
             <div class="col-md-5 order-md-2">
-              <img src="image/IMG_3874.JPG" class="img-fluid rounded-start" alt="Nursery">
+              <div id="nurseryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2200">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="image/IMG_3874.JPG" class="program-img d-block w-100" alt="Nursery 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/IMG_3872.JPG" class="program-img d-block w-100" alt="Nursery 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/IMG_3871.JPG" class="program-img d-block w-100" alt="Nursery 3">
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col-md-7 order-md-1">
               <div class="card-body">
                 <h3 class="card-title">Nursery</h3>
-                <p class="mb-1"><strong>Age:</strong> 3 - 4 years</p>
-                <p class="mb-1"><strong>Hours:</strong> 8:00 - 15:00</p>
+                <p class="mb-1"><strong>Age:</strong> 3 - 5 years</p>
+                <p class="mb-1"><strong>Hours:</strong> 8:00 - 15:30</p>
                 <p>Nursery focuses on early literacy, numeracy readiness, social skills and creative play. Our classrooms are bright and resource-rich with trained early-years educators.</p>
                 <p><strong>Curriculum highlights:</strong> Story time, phonics play, sensory activities, outdoor play and basic numeracy.</p>
               </div>
@@ -73,10 +114,22 @@
   <div id="primary" class="col-md-12">
         <div class="card program-card shadow-sm">
           <div class="row g-0 align-items-center">
-            <div class="col-md-5">
-              <img src="image/IMG_3875.JPG" class="img-fluid rounded-start" alt="Primary">
+            <div class="col-md-5 order-md-2">
+              <div id="primaryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2200">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="image/IMG_3875.JPG" class="program-img d-block w-100" alt="Primary 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/IMG_3876.JPG" class="program-img d-block w-100" alt="Primary 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/IMG_3877.JPG" class="program-img d-block w-100" alt="Primary 3">
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-7 order-md-1">
               <div class="card-body">
                 <h3 class="card-title">Primary School</h3>
                 <p class="mb-1"><strong>Age:</strong> 5 - 11 years</p>

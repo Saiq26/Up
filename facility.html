@@ -11,6 +11,15 @@
     .facility-card {
       transition: box-shadow 0.2s;
     }
+    .facility-img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .carousel-inner .facility-img {
+      height: 140px;
+    }
     .facility-card:hover, .facility-card:focus {
       box-shadow: 0 0.5rem 1rem rgba(26,35,126,0.15);
       outline: 2px solid #ffd600;
@@ -30,11 +39,23 @@
     <div class="container">
       <h2 class="fw-bold text-center mb-4">Our Facilities</h2>
       <div class="row justify-content-center">
-        <!-- Playground -->
+        <!-- Playground (carousel) -->
         <div class="col-md-3 col-6 mb-4">
           <div class="card facility-card shadow-sm text-center">
+            <div id="playgroundCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2200">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="image/IMG_3870.JPG" class="facility-img d-block w-100" alt="Playground 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="image/IMG_3867.JPG" class="facility-img d-block w-100" alt="Playground 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="image/IMG_3868.JPG" class="facility-img d-block w-100" alt="Playground 3">
+                </div>
+              </div>
+            </div>
             <div class="card-body">
-              <i class="fas fa-futbol fa-3x mt-4 text-primary"></i>
               <h6 class="card-title mb-0 mt-2">Playground</h6>
             </div>
           </div>
@@ -42,8 +63,8 @@
         <!-- Transport -->
         <div class="col-md-3 col-6 mb-4">
           <div class="card facility-card shadow-sm text-center">
+            <img src="image/IMG-20250921-WA0021.jpg" alt="Transport" class="facility-img">
             <div class="card-body">
-              <i class="fas fa-bus fa-3x mt-4 text-warning"></i>
               <h6 class="card-title mb-0 mt-2">Transport</h6>
             </div>
           </div>
@@ -51,8 +72,8 @@
         <!-- Counseling -->
         <div class="col-md-3 col-6 mb-4">
           <div class="card facility-card shadow-sm text-center">
+            <img src="image/IMG_3874.JPG" alt="Counseling" class="facility-img">
             <div class="card-body">
-              <i class="fas fa-user-friends fa-3x mt-4 text-success"></i>
               <h6 class="card-title mb-0 mt-2">Counseling</h6>
             </div>
           </div>
@@ -60,8 +81,8 @@
         <!-- Dining Hall -->
         <div class="col-md-3 col-6 mb-4">
           <div class="card facility-card shadow-sm text-center">
+            <img src="image/IMG_3869.JPG" alt="Dining Hall" class="facility-img">
             <div class="card-body">
-              <i class="fas fa-utensils fa-3x mt-4 text-danger"></i>
               <h6 class="card-title mb-0 mt-2">Dining Hall</h6>
             </div>
           </div>
@@ -69,8 +90,8 @@
         <!-- Medical Room -->
         <div class="col-md-3 col-6 mb-4">
           <div class="card facility-card shadow-sm text-center">
+            <img src="image/IMG_3877.JPG" alt="Medical Room" class="facility-img">
             <div class="card-body">
-              <i class="fas fa-briefcase-medical fa-3x mt-4 text-info"></i>
               <h6 class="card-title mb-0 mt-2">Medical Room</h6>
             </div>
           </div>
@@ -78,17 +99,18 @@
         <!-- Computer Lab -->
         <div class="col-md-3 col-6 mb-4">
           <div class="card facility-card shadow-sm text-center">
+            <img src="image/IMG_3883.JPG" alt="Computer Lab" class="facility-img">
             <div class="card-body">
-              <i class="fas fa-desktop fa-3x mt-4 text-secondary"></i>
               <h6 class="card-title mb-0 mt-2">Computer Lab</h6>
+              <p>This lab was bastared</p>
             </div>
           </div>
         </div>
         <!-- Library/Reading Room -->
         <div class="col-md-3 col-6 mb-4">
           <div class="card facility-card shadow-sm text-center">
+            <img src="image/IMG_3872.JPG" alt="Library Reading Room" class="facility-img">
             <div class="card-body">
-              <i class="fas fa-book-reader fa-3x mt-4 text-dark"></i>
               <h6 class="card-title mb-0 mt-2">Library/Reading Room</h6>
             </div>
           </div>
