@@ -1,3 +1,36 @@
+<style>
+@media (max-width: 991.98px) {
+  .navbar { position: relative; }
+  #navbarNav.collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none; /* hidden by default */
+  }
+
+  /* Ensure overlay behavior during the transition phase as well */
+  #navbarNav.collapsing,
+  #navbarNav.collapse.show {
+    display: block; /* visible when toggled or animating */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--primary-color);
+    z-index: 1050;
+    padding: 1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,.15);
+    border-radius: 0 0 12px 12px;
+    animation: dropdownFade .12s ease-in-out;
+  }
+
+  @keyframes dropdownFade {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+</style>
 <nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
@@ -15,8 +48,8 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-bs-toggle="dropdown">About Us</a>
           <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a class="dropdown-item" href="#aboutCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="aboutCollapse">Historical Background</a></li>
-            <li><a class="dropdown-item" href="#">Administration</a>
+            <li><a class="dropdown-item" href="about.html">Historical Background</a></li>
+            <li><a class="dropdown-item" href="about.html#administration">Administration</a>
            <!-- <li><a class="dropdown-item" href="#">Welcome Note</a></li>-->
           </ul>
         </li>

@@ -4,36 +4,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admission - Up Skill Academy</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/a2d9d6c9a6.js"
-      crossorigin="anonymous"
-    ></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a2d9d6c9a6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
     <style>
-      .admission-header {
-        padding-top: 0.2rem;
-        padding-bottom: 1.25rem;
-        position: relative;
-      }
+      .admission-header { padding-top: 0.2rem; padding-bottom: 1.25rem; position: relative; }
+      .step { display:flex; align-items:flex-start; gap:0.75rem; }
+      .step-number { flex:0 0 36px; height:36px; width:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:var(--logo-text-color); color:#1a237e; font-weight:700; }
+      .fee-card .list-group-item { display:flex; justify-content:space-between; align-items:center; }
+      .faq-item + .faq-item { margin-top: .5rem; }
+      /* Branded download buttons */
+      a.form { display:block; width:100%; text-align:center; text-decoration:none; border-radius:.375rem; padding:.6rem .9rem; font-weight:600; background: var(--secondary-color); color: var(--primary-color); border: 1.5px solid var(--secondary-color); transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease; }
+      a.form:hover { transform: translateY(-1px); box-shadow: 0 6px 18px --primary-color; opacity:.95; }
+      a.form:active { transform: translateY(0); box-shadow:none; }
+      a.form + a.form { margin-top:.5rem; }
+      a.form i { pointer-events:none; }
+      /* Outlined variant */
+      a.form.outline { background: transparent; color: var(--logo-text-color); border-color: var(--logo-text-color); }
+      a.form.outline:hover { background: var(--logo-text-color); color: var(--primary-color); }
     </style>
   </head>
   <body>
     <!-- Navbar -->
     <div id="header"></div>
 
-    <header
-      class="admission-header py-5 text-center text-white"
-      style="background: linear-gradient(90deg, #1a237e, #283593)"
-    >
+    <header class="admission-header py-5 text-center text-white" style="background: linear-gradient(90deg, #1a237e, #283593)">
       <div class="container">
         <h1 class="fw-bold">Admission</h1>
-        <p class="lead">
-          Everything you need to know to apply to Up Skill Academy.
-        </p>
+        <p class="lead mb-0">Everything you need to apply to Up Skill Academy.</p>
       </div>
     </header>
 
@@ -44,70 +42,141 @@
           <li class="breadcrumb-item active" aria-current="page">Admission</li>
         </ol>
       </nav>
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <section id="entry-requirements" class="mb-4">
+            <h2 class="h4">Entry Requirements</h2>
+            <p class="mb-2">Applicants must be of the appropriate age for the program they are applying to. Please prepare the following:</p>
+            <ul>
+              <li>Birth certificate or proof of age</li>
+              <li>Immunization record</li>
+              <li>Previous school records (if applicable)</li>
+              <li>Completed application form</li>
+              <li>Two passport-size photographs</li>
+            </ul>
+          </section>
 
-      <section id="entry-requirements" class="mb-5">
-        <h2>Entry Requirements</h2>
-        <p>
-          Applicants must be of the appropriate age for the program they are
-          applying to. Basic documents required:
-        </p>
-        <ul>
-          <li>Birth certificate or proof of age</li>
-          <li>Immunization record</li>
-          <li>Previous school records (if applicable)</li>
-          <li>Completed application form</li>
-        </ul>
-      </section>
+          <section id="steps" class="mb-4">
+            <h2 class="h4">How to Apply</h2>
+            <div class="vstack gap-3 mt-3">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                  <h6 class="mb-1">Download the application form</h6>
+                  <p class="mb-0">Get the latest form below and read the instructions carefully.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                  <h6 class="mb-1">Prepare required documents</h6>
+                  <p class="mb-0">Attach copies of birth certificate, immunization record, and recent photos.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                  <h6 class="mb-1">Submit your application</h6>
+                  <p class="mb-0">Submit at our office during working hours or email a scanned copy to <a href="mailto:upskillacademy81@gmail.com">upskillacademy81@gmail.com</a>.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div>
+                  <h6 class="mb-1">Attend an interview/orientation</h6>
+                  <p class="mb-0">We will contact you to schedule a short meeting and school tour.</p>
+                </div>
+              </div>
+            </div>
+          </section>
 
-      <section id="fee-structure" class="mb-5">
-        <h2>Fee Structure</h2>
-        <p>
-          Below is a simple example fee structure. Replace with your official
-          figures as needed.
-        </p>
-        <ul>
-          <li>Registration fee: $20 (one-time)</li>
-          <li>Term fee: $150 per term</li>
-          <li>Uniforms and materials: variable</li>
-        </ul>
-      </section>
+          <!-- <section id="faqs" class="mb-4">
+            <h2 class="h4">Frequently Asked Questions</h2>
+            <div class="accordion mt-3" id="faqAccordion">
+              <div class="accordion-item faq-item">
+                <h2 class="accordion-header" id="faq1h">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">What age groups do you admit?</button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1h" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Daycare (1–2 years), Nursery (3–5 years), and Primary (5–11 years).</div>
+                </div>
+              </div>
+              <div class="accordion-item faq-item">
+                <h2 class="accordion-header" id="faq2h">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">When will I receive a response?</button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2h" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">We typically respond within 5 working days after receiving a complete application.</div>
+                </div>
+              </div>
+              <div class="accordion-item faq-item">
+                <h2 class="accordion-header" id="faq3h">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Is there transportation?</button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3h" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Yes. We offer optional school transport services to select routes. Details are available at the office.</div>
+                </div>
+              </div>
+            </div>
+          </section> -->
+        </div>
 
-      <section id="download-form" class="mb-5">
-        <h2>Download Application Form</h2>
-        <p>
-          Download the application form, fill it, and submit it to our office or
-          upload via email.
-        </p>
-        <a href="application_form.pdf" download class="btn btn-primary">Download application form (PDF)</a>
-      </section>
+        <div class="col-lg-4">
+          <section id="fee-structure" class="mb-4">
+            <div class="card fee-card shadow-sm">
+              <div class="card-header bg-warning text-dark fw-bold"><i class="fas fa-receipt me-2"></i> Fee Structure</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><span>Registration (one-time)</span><strong>$20</strong></li>
+                <li class="list-group-item"><span>Term fee</span><strong>$150</strong></li>
+                <li class="list-group-item"><span>Uniform & materials</span><strong>Variable</strong></li>
+              </ul>
+              <div class="card-footer bg-white small text-muted">Note: Fees are indicative and subject to official confirmation.</div>
+            </div>
+          </section>
 
-      <section id="help-desk" class="mb-5">
-        <h2>Help Desk</h2>
-        <p>Contact our admissions help desk for guidance:</p>
-        <ul>
-          <li>Email: upskillacademy81@gmail.com</li>
-          <li>Phone: +255 777 903 231</li>
-          <li>Office hours: Mon-Fri 8:00 - 16:00</li>
-        </ul>
-      </section>
+          <section id="download-form" class="mb-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Application Form</h5>
+                <p class="card-text">Download, fill, and submit the application to begin the process.</p>
+                <a class="form" href="assets/UP SKILL PRIMARY 2026 R.docx" download><i class="fas fa-download me-2"></i>Primary Application Form</a>
+                <a class="form outline" href="assets/UP SKILL 2026.docx" download>Nursery Application Form</a>
+              </div>
+            </div>
+          </section>
+
+          <section id="help-desk" class="mb-4">
+            <div class="card shadow-sm">
+              <div class="card-header text-white fw-bold" style="background-color: var(--primary-color);"><i class="fas fa-headset me-2"></i> Help Desk</div>
+              <div class="card-body">
+                <p class="mb-1"><i class="fas fa-envelope me-2"></i><a href="mailto:upskillacademy81@gmail.com">upskillacademy81@gmail.com</a></p>
+                <p class="mb-1"><i class="fas fa-phone me-2"></i>+255 777 903 231</p>
+                <p class="mb-1"><i class="fas fa-phone me-2"></i>+255 772 217 921</p>
+                <p class="mb-0 small text-muted">Office hours: Mon–Fri 8:00 – 16:00</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- <section class="my-4 text-center">
+        <a href="#download-form" class="btn btn-success btn-lg"><i class="fas fa-file-signature me-2"></i>Apply Now</a>
+      </section> -->
     </main>
+
     <div id="footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       // Load header.html into #header
-      fetch("header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header").innerHTML = data;
-        });
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => { document.getElementById('header').innerHTML = data; });
       // Load footer.html into #footer
-      fetch("footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer").innerHTML = data;
-        });
-      document.getElementById("year").textContent = new Date().getFullYear();
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => { document.getElementById('footer').innerHTML = data; });
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </body>
 </html>

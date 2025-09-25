@@ -7,9 +7,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2d9d6c9a6.js" crossorigin="anonymous"></script>
   <style>
-    .contact-card { border: none; }
+    .contact-card { border: none; transition: box-shadow .18s ease, transform .18s ease; }
+    .contact-card:hover { box-shadow: 0 16px 36px rgba(26,35,126,.12); transform: translateY(-2px); }
     .social-icon { width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; color:#fff; margin-right:8px; }
     .contact-header { padding-top: 0.2rem; padding-bottom: 1.25rem; position: relative; }
+    /* Brand-aligned primary button */
+    .btn-primary { background-color: var(--primary-color); border: none; }
+    .btn-primary:hover { background-color: #283593; }
+    /* Inputs */
+    .form-control:focus { border-color: var(--secondary-color); box-shadow: 0 0 0 .2rem rgba(255,214,0,.25); }
+    /* Helper text */
+    .muted { color:#6c757d; font-size:.925rem; }
   </style>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -25,6 +33,12 @@
   </header>
 
   <main class="container my-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+      </ol>
+    </nav>
     <div class="row g-4">
       <div class="col-md-6">
         <div class="card contact-card shadow-sm p-3">
@@ -35,42 +49,50 @@
           <p class="mb-1"><i class="fas fa-envelope me-2"></i>upskillacademy81@gmail.com</p>
 
           <h6 class="mt-3">Follow Us</h6>
-          <a href="#" class="social-icon" style="background:#1877f3;"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-icon" style="background:#e4405f;"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/2348001234567" target="_blank" class="social-icon" style="background:#25d366;"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/share/1ARHbD9iNB/?mibextid=wwXIfr" class="social-icon" aria-label="Facebook" style="background:#1877f3;"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/up.skills_academy_" class="social-icon" aria-label="Instagram" style="background:#e4405f;"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/2348001234567" target="_blank" class="social-icon" aria-label="WhatsApp" style="background:#25d366;"><i class="fab fa-whatsapp"></i></a>
 
           <h6 class="mt-4">Help Desk</h6>
-          <p>Office hours: Mon-Fri 8:00 - 16:00</p>
+          <p class="mb-2">Office hours: Mon-Fri 8:00 - 16:00</p>
+          <p class="mb-0 muted">We aim to respond to emails within 1 working day.</p>
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="card contact-card shadow-sm p-3">
           <h5 class="fw-bold">Send us a message</h5>
-          <form>
+          <form id="contactForm" novalidate>
             <div class="mb-3">
-              <label class="form-label">Your name</label>
-              <input class="form-control" placeholder="Full name">
+              <label class="form-label" for="cName">Your name</label>
+              <input id="cName" class="form-control" placeholder="Full name" required>
             </div>
             <div class="mb-3">
-              <label class="form-label">Email</label>
-              <input class="form-control" placeholder="you@example.com">
+              <label class="form-label" for="cEmail">Email</label>
+              <input id="cEmail" type="email" class="form-control" placeholder="you@example.com" required>
             </div>
             <div class="mb-3">
-              <label class="form-label">Message</label>
-              <textarea class="form-control" rows="4"></textarea>
+              <label class="form-label" for="cMessage">Message</label>
+              <textarea id="cMessage" class="form-control" rows="4" placeholder="How can we help?" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Send message</button>
+            <div id="contactFeedback" class="mt-3" aria-live="polite"></div>
           </form>
         </div>
+      </div>
+    </div>
 
-        <div class="mt-3">
-          <h6 class="mb-2">Our location</h6>
-          <iframe
-            src="https://www.google.com/maps?q=Paje,+Zanzibar&output=embed"
-            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Paje Map"></iframe>
+    <div class="row mt-4">
+      <div class="col-12">
+        <h6 class="mb-2">Our location</h6>
+        <div class="card shadow-sm">
+          <div class="ratio ratio-21x9">
+            <iframe
+              src="https://www.google.com/maps?q=Paje,+Zanzibar&output=embed"
+              style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Paje Map"></iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -93,6 +115,34 @@
         document.getElementById('footer').innerHTML = data;
       });
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form: build mailto and open client
+    (function() {
+      var contactForm = document.getElementById('contactForm');
+      if (!contactForm) return;
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var name = document.getElementById('cName').value.trim();
+        var email = document.getElementById('cEmail').value.trim();
+        var message = document.getElementById('cMessage').value.trim();
+        var feedback = document.getElementById('contactFeedback');
+        if (!name || !email || !message) {
+          feedback.innerHTML = '<div class="alert alert-danger p-2">Please complete all fields.</div>';
+          return;
+        }
+        var to = 'upskillacademy81@gmail.com';
+        var subject = encodeURIComponent('Website Contact - ' + name);
+        var bodyLines = [];
+        bodyLines.push('Name: ' + name);
+        bodyLines.push('Email: ' + email);
+        bodyLines.push('\nMessage:\n' + message);
+        bodyLines.push('\n\n---\nThis message was sent from the website contact form.');
+        var body = encodeURIComponent(bodyLines.join('\n'));
+        var mailto = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
+        feedback.innerHTML = '<div class="alert alert-info p-2">Opening your email client... If nothing happens, please email us at ' + to + '.</div>';
+        setTimeout(function() { window.location.href = mailto; }, 300);
+      });
+    })();
   </script>
 </body>
 </html>
